@@ -31,11 +31,24 @@ puts "Simple calculator"
 25.times { print "-"}
 puts
 puts "Enter the first number"
-first_number = gets.chomp
+first_num = gets.chomp
 puts "Enter the second number"
-second_number = gets.chomp
-puts "The first number multiplied by the second number is #{multiply(first_number, second_number)}"
-puts "The first number divided by the second number is #{divide(first_number, second_number)}"
-puts "The first number subtracted by the second number is #{subtract(first_number, second_number)}"
-puts "The first number added to the second number is #{add(first_number, second_number)}"
-puts "The first number mod by the second number is #{mod(first_number, second_number)}"
+second_num = gets.chomp
+puts "What do you want to do?"
+puts "Enter 1 for multiply, 2 for addition, 3 for subtraction"
+user_entry = gets.chomp
+if user_entry == "1"
+    puts "You have chosen to multiply"
+    result = multiply(first_num, second_num)
+    puts result
+elsif user_entry == "2"
+    puts "You have chosen to add"
+    result = add(first_num, second_num)
+    puts result
+elsif user_entry == "3"
+    puts "You have chosen to subtract"
+    result = subtract(first_num, second_num)
+    puts result
+else
+    puts "Invalid entry"
+end
